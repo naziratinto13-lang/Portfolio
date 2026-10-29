@@ -357,100 +357,24 @@ nav a{padding:12px 0}
 
 <script>
 /* ===== CONFIG : à modifier ===== */
-const EMAIL = "";                 // ex. "prenom@domaine.com"
-const SHOW_DRAFTS = false;         // true = mode préparation (emplacements visibles) ; false = publication
-/* Familles de projets */
-const FAM = {A:"Hydrologie & modélisation",B:"Eau potable & hydraulique",C:"Assainissement & drainage",D:"Aménagements hydro-agricoles",E:"SIG & analyse spatiale",F:"Académique & personnel"};
-/* Médias par projet : media:[{k:"photo"|"map"|"pdf"|"video",src,cap,poster}]. Projets. Champs possibles : y (année), s (résumé), c contexte, o objectif, r mon rôle, m approche, u outils, l résultats/livrables, k compétences.
-   Un champ vide n'est pas affiché. draft:1 = masqué quand SHOW_DRAFTS = false. */
-const P = [
- {f:"B",y:"2023–24",t:"Adduction en eau potable d'une ville",s:"Dimensionnement d'un système d'AEP, du forage à la distribution, pour 12 036 habitants à l'horizon 2033.",
-  c:"Projet de groupe de la formation GEAAH (S5, année scolaire 2023–2024), à partir d'un plan d'occupation établi.",
-  o:"Dimensionner un système d'adduction en eau potable pour une ville de 12 036 habitants (horizon 2033).",
-  m:"Besoins de pointe (domestiques, équipements annexes, pertes de réseau de 15 %), ressource souterraine (cinq forages de 30 m³/h), conduites forage-bâche et bâche-réservoir comparées par plusieurs formules (Bresse, Munier, Bonin, Bedjaoui), dimensionnement de la bâche, puis du réseau maillé par la méthode de Hardy Cross.",
-  l:"Besoin total de pointe de 1 601 m³/j couvert par cinq forages (1 650 m³ en 11 h de pompage) ; conduites de 140 mm (forage-bâche) et 315 mm (bâche-réservoir) de diamètre extérieur ; réseau maillé équilibré en 5 itérations (|J| ≤ 0,2 m, |ΔQ| ≤ 0,5 l/s).",
-  k:"Estimation des besoins en eau · dimensionnement de conduites · stockage (bâche, réservoir) · réseau maillé (Hardy Cross) · travail en équipe",media:[{k:"doc",ref:"aep",cap:"Consulter le rapport (10 pages)"}]},
- {f:"C",y:"2023–24",t:"Réseau d'assainissement pluvial d'une zone résidentielle",s:"Six bassins versants et un collecteur principal de cinq tronçons dimensionné jusqu'à l'exutoire.",
-  c:"Projet de groupe de la formation GEAAH (S5, année scolaire 2023–2024), sur une zone résidentielle de six blocs, à partir d'un plan cadastral avec altitudes.",
-  o:"Délimiter les bassins versants, placer l'exutoire et dimensionner le collecteur principal du réseau pluvial.",
-  m:"Exutoire au point le plus bas (écoulement gravitaire), collecteur tracé selon les plus faibles altitudes ; débits par la méthode rationnelle (période de retour 10 ans, formule de Montana, temps de concentration de Kirpich) ; canaux rectangulaires en béton armé dimensionnés avec la méthode de la SHF, Manning-Strickler et la revanche de Lacey ; profondeurs et cotes de pose.",
-  u:"Plan cadastral · Word · Excel",
-  l:"Débit de projet de 0,99 m³/s sur le dernier tronçon (T = 10 ans), pour un canal de 1,20 m de large et 0,76 m de haut. Recommandations : maintenance du réseau et bassin de rétention.",
-  k:"Délimitation de bassins versants · méthode rationnelle · dimensionnement hydraulique de canaux · cotes de pose",media:[{k:"doc",ref:"ap",cap:"Consulter le rapport (13 pages)"}]},
- {f:"B",y:"2025",t:"Dimensionnement du réseau d'alimentation en eau de la cité de Bassemyam",s:"Stage à l'ONEA : appui au dimensionnement et à la simulation hydraulique du réseau.",
-  c:"Stage d'assistante aux études hydrauliques à l'Office National de l'Eau et de l'Assainissement (ONEA), Ouagadougou, juin–sept. 2025.",
-  o:"Appui à l'étude de dimensionnement et à la simulation hydraulique du réseau d'eau de la cité de Bassemyam.",
-  r:"Stagiaire — assistante aux études hydrauliques.",u:"EPANET · AutoCAD · QGIS · Global Mapper · Excel"},
- {f:"C",y:"2024",t:"Dimensionnement du réseau d'assainissement de la voie d'accès au quartier de Bassinko",s:"Stage chez GEFA : calcul des débits de projet et dimensionnement des ouvrages d'assainissement.",
-  c:"Stage d'assistante aux études hydrologiques chez Global Engineering for Africa (GEFA), Ouagadougou, janv.–avr. 2024.",
-  o:"Appui aux études hydrologiques et hydrauliques de la voie d'accès de Bassinko.",
-  r:"Stagiaire — assistante aux études hydrologiques.",m:"Contribution au calcul des débits de projet et au dimensionnement des ouvrages d'assainissement.",u:"QGIS · AutoCAD · Excel"},
- {f:"C",y:"2023",t:"Suivi et contrôle des travaux de la voie d'accès au quartier de Bassinko",s:"Stage chez GEFA : suivi des travaux de génie civil et contrôle de la qualité des matériaux.",
-  c:"Stage d'assistante au suivi et au contrôle des travaux chez Global Engineering for Africa (GEFA), Ouagadougou, juin–août 2023.",
-  o:"Appui au suivi de l'exécution des travaux de génie civil et au contrôle de la qualité des matériaux.",
-  r:"Stagiaire — assistante au suivi et au contrôle des travaux."},
- {f:"A",y:"2026",t:"Appui à un projet doctoral : modèle SWAT sur les bassins nationaux du Burkina Faso",s:"Mise en œuvre de SWAT avec RSWAT sur les bassins du Mouhoun, du Niger, de la Comoé et du Nakambé.",
-  c:"Stage de recherche (appui à un projet doctoral), Institut 2iE, Ouagadougou, depuis sept. 2026.",
-  o:"Mettre en œuvre le modèle SWAT avec le package RSWAT sur les bassins nationaux du Burkina Faso (Mouhoun, Niger, Comoé et Nakambé).",
-  m:"Création et structuration de bases de données ; simulations et calage ; test de la chaîne de simulation sur le bassin de Wayen pour la période 1991–2020.",
-  r:"Stagiaire en recherche — appui à un projet doctoral.",u:"SWAT · RSWAT"},
- {f:"E",y:"",t:"Carte interactive de l'évolution du barrage de Samendéni",s:"Projet personnel.",c:"Projet personnel."},
- {f:"A",t:"Modélisation hydrologique du bassin de Wayen/Ouañen",draft:1},
- {f:"A",t:"Travaux liés à SWOT",draft:1},
- {f:"A",t:"Travaux d'hydrologie",draft:1},
- {f:"A",t:"Dynamique fluviale",draft:1},
- {f:"B",t:"Modélisation de réseaux hydrauliques",draft:1},
- {f:"D",t:"Projet d'aménagement hydro-agricole",draft:1}
-];
-const LBL = {c:"Contexte",o:"Objectif",r:"Mon rôle",m:"Approche",u:"Outils",l:"Résultats / livrables",k:"Compétences"};
-/* Parcours */
-const T = [
- {y:"2014 — 2021",t:"Baccalauréat en sciences de la nature",w:"PMK"},   /* À CONFIRMER : période */
- {y:"2021 — 2024",t:"Bachelor en génie de l'eau, de l'assainissement et des aménagements hydro-agricoles"},
- {y:"2024 — 2026",t:"Master en génie de l'eau, de l'assainissement et des aménagements hydro-agricoles",w:"2iE — Institut International d'Ingénierie de l'Eau et de l'Environnement"},
- {y:"2026",t:"Soutenance du Master"},
- {y:"2026 — aujourd'hui",t:"Recherche · projets · développement professionnel",k:"Hydrologie · modélisation · SIG · données satellitaires · ingénierie de l'eau"},
-];
-/* Stages (intitulés et missions tels que fournis) */
-const STAGES = [
- {d:"juin–août 2023",t:"Suivi et contrôle des travaux de la voie d'accès au quartier de Bassinko",r:"Stagiaire — Assistante au suivi et au contrôle des travaux",o:"Global Engineering for Africa (GEFA) — Ouagadougou",b:["Appui au suivi de l'exécution des travaux de génie civil et au contrôle de la qualité des matériaux."]},
- {d:"janv.–avr. 2024",t:"Dimensionnement du réseau d'assainissement de la voie d'accès au quartier de Bassinko",r:"Stagiaire — Assistante aux études hydrologiques",o:"Global Engineering for Africa (GEFA) — Ouagadougou",b:["Appui aux études hydrologiques et hydrauliques de la voie d'accès de Bassinko.","Contribution au calcul des débits de projet et au dimensionnement des ouvrages d'assainissement avec QGIS, AutoCAD et Excel."]},
- {d:"juin–sept. 2025",t:"Dimensionnement du réseau d'alimentation en eau de la cité de Bassemyam",r:"Stagiaire — Assistante aux études hydrauliques",o:"Office National de l'Eau et de l'Assainissement (ONEA) — Ouagadougou",b:["Appui à l'étude de dimensionnement et à la simulation hydraulique du réseau d'eau de la cité de Bassemyam.","Mobilisation d'outils de conception et d'analyse : EPANET, AutoCAD, QGIS, Global Mapper et Excel."]},
- {d:"févr.–juil. 2026",t:"Stage de recherche en master",r:"Stagiaire en recherche",o:"Laboratoire LEHSA, Institut 2iE — Ouagadougou",b:["Modélisation hydrologique de 17 bassins versants intermittents du Burkina Faso avec GR6J, HBV et IHACRES.","Intégration de données satellitaires d'évapotranspiration réelle (GLEAM v4.3a) à la calibration des modèles et comparaison de scénarios de calibration.","Traitement et analyse de données hydroclimatiques et satellitaires ; évaluation des modèles (KGE, NSE, PBIAS) et scripts sous R."]},
- {d:"sept. 2026 – en cours",t:"Appui à un projet doctoral",r:"Stagiaire en recherche — Appui à un projet doctoral",o:"Institut 2iE — Ouagadougou",b:["Création et structuration de bases de données pour un projet de modélisation hydrologique.","Mise en œuvre du modèle SWAT avec le package RSWAT sur les bassins nationaux du Burkina Faso (Mouhoun, Niger, Comoé et Nakambé) ; simulations et calage.","Test de la chaîne de simulation sur le bassin de Wayen pour la période 1991–2020."],now:1}
-];
-/* Évolution du profil (ordre fourni, sans dates) */
-const CH = ["Sciences de la nature","Génie de l'eau","Ingénierie","Terrain","SIG / données","Hydrologie","Modélisation","Recherche appliquée"];
-/* Certifications : intitulés exacts. Ajouter file:"cv/certificat-1.pdf" (ou image) pour afficher l'aperçu. */
-const CERT = [
- {t:"Concevoir un projet de développement respectueux de l'environnement et des populations",org:"Campus France",date:"17/12/2025"},
- {t:"Cadre environnemental et social de la Banque mondiale",org:"Banque mondiale",date:"17/11/2025"},
- {t:"ISO 9001:2015 Quality Management System Awareness",org:"Knights of Safety",date:"26/12/2025"},
- {t:"ISO 9001:2015 Environmental Management System Awareness",org:"Knights of Safety",date:"26/12/2025"}
-];
-const FLOW = [["Observations","Q · ETR · SM · TWS"],["Données satellitaires"],["Modèle hydrologique"],["Calibration multivariée"],["Meilleure représentation du bassin"],["Évaluation des ressources en eau"]];
-/* Carnet de terrain : entrées {type, date, lieu, t (titre), txt, img, alt}. Vide = emplacements (mode préparation) ou section masquée (publication). */
-const CARNET = [
- {g:"Sorties et visites techniques",t:"Assainissement autonome"},
- {g:"Sorties et visites techniques",t:"Gestion et traitement des boues de vidange"},
- {g:"Sorties et visites techniques",t:"Gestion des déchets solides"},
- {g:"Sorties et visites techniques",t:"Aménagement des bas-fonds"},
- {g:"Sorties et visites techniques",t:"Procédés de traitement des eaux de consommation"},
- {g:"Sorties et visites techniques",t:"Procédés de traitement des eaux usées"},
- {g:"Sorties et visites techniques",t:"Télégestion et recherche des fuites"},
- {g:"Sorties et visites techniques",t:"Diagnostic des aménagements hydro-agricoles"},
- {g:"Sorties et visites techniques",t:"Diagnostic des STEP"},
- {g:"Sorties et visites techniques",t:"Technique d'implantation des forages"},
- {g:"Activités",t:"Reboisement"},
- {g:"Activités",t:"Doctoriales 2025"},
- {g:"Activités",t:"SITHAO"},
- {g:"Activités",t:"Activité de sensibilisation à l'hygiène au complexe EPHATA"},
- {g:"Distinction",t:"Wall of Women — 1re édition, session 2026",txt:"Honneur d'être sur la première édition du « Wall of Women »."}
-];
-const CV = "";                    // ex. "cv/Nazira-Tinto-CV.pdf" ; vide = bouton désactivé
-const SEC = [["accueil","Accueil"],["apropos","À propos"],["expertise","Expertise"],["projets","Projets"],["carnet","Carnet"],["parcours","Parcours"],["recherche","Recherche"],["contact","Contact"]].filter(([i]) => i!=="carnet" || SHOW_DRAFTS || CARNET.length);
-if(!SEC.some(s => s[0]==="carnet")) document.getElementById("carnet").remove();
-
+(async () => {
+  const paths = ["content/settings.json", "content/projects.json", "content/education.json", "content/experiences.json", "content/certificates.json", "content/carnet.json"];
+  const responses = await Promise.all(paths.map(path => fetch(path)));
+  if (responses.some(response => !response.ok)) throw new Error("Impossible de charger les contenus du portfolio.");
+  const [settings, projects, education, experiences, certificates, carnet] = await Promise.all(responses.map(response => response.json()));
+  const EMAIL = settings.email || "";
+  const SHOW_DRAFTS = false;
+  const FAM = {A:"Hydrologie & modélisation",B:"Eau potable & hydraulique",C:"Assainissement & drainage",D:"Aménagements hydro-agricoles",E:"SIG & analyse spatiale",F:"Académique & personnel"};
+  const P = projects.items || [];
+  const T = education.items || [];
+  const STAGES = experiences.items || [];
+  const CH = ["Sciences de la nature","Génie de l'eau","Ingénierie","Terrain","SIG / données","Hydrologie","Modélisation","Recherche appliquée"];
+  const CERT = certificates.items || [];
+  const FLOW = [["Observations","Q · ETR · SM · TWS"],["Données satellitaires"],["Modèle hydrologique"],["Calibration multivariée"],["Meilleure représentation du bassin"],["Évaluation des ressources en eau"]];
+  const CARNET = carnet.items || [];
+  const CV = settings.cv || "";
+  const SEC = [["accueil","Accueil"],["apropos","À propos"],["expertise","Expertise"],["projets","Projets"],["carnet","Carnet"],["parcours","Parcours"],["recherche","Recherche"],["contact","Contact"]].filter(([i]) => i!=="carnet" || SHOW_DRAFTS || CARNET.length);
+  if(!SEC.some(s => s[0]==="carnet")) document.getElementById("carnet").remove();
 /* ===== SCRIPT ===== */
 document.documentElement.classList.add("js");
 const $ = s => document.querySelector(s);
@@ -525,6 +449,10 @@ document.querySelectorAll(".rv").forEach(e => io.observe(e));
 addEventListener("scroll", onScroll, {passive:true});
 new ResizeObserver(() => {place();onScroll()}).observe(document.body);
 requestAnimationFrame(() => $("#bassin").classList.add("drawn"));
+
+})().catch(error => {
+  console.error("Erreur de chargement du portfolio :", error);
+});
 </script>
 </body>
 </html>
