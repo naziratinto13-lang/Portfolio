@@ -4,9 +4,10 @@
       "c": "Projet de groupe de la formation GEAAH (S5, année scolaire 2023–2024), à partir d'un plan d'occupation établi.",
       "media": [
         {
-          "k": "doc",
+          "k": "pdf",
           "ref": "aep",
-          "cap": "Consulter le rapport (10 pages)"
+          "cap": "Consulter le rapport (10 pages)",
+          "src": "https://drive.google.com/file/d/1Aw_D52JN3YuZ6swXTj70ctGCT1NKnIKR/view?usp=sharing"
         }
       ],
       "f": "B",
@@ -15,7 +16,7 @@
       "m": "Besoins de pointe (domestiques, équipements annexes, pertes de réseau de 15 %), ressource souterraine (cinq forages de 30 m³/h), conduites forage-bâche et bâche-réservoir comparées par plusieurs formules (Bresse, Munier, Bonin, Bedjaoui), dimensionnement de la bâche, puis du réseau maillé par la méthode de Hardy Cross.",
       "o": "Dimensionner un système d'adduction en eau potable pour une ville de 12 036 habitants (horizon 2033).",
       "s": "Dimensionnement d'un système d'AEP, du forage à la distribution, pour 12 036 habitants à l'horizon 2033.",
-      "t": "Adduction en eau potable d'une ville2",
+      "t": "Adduction en eau potable d'une ville",
       "y": "2023–24"
     },
     {
