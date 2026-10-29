@@ -1,0 +1,137 @@
+backend:
+  name: turbo-github
+  turbo_site_id: b40dab92-edcc-4261-b1fe-2983b58fc4b7
+  branch: main
+
+site_url: https://naziratinto13-lang.github.io/Portfolio/
+display_url: https://naziratinto13-lang.github.io/Portfolio/
+media_folder: "uploads"
+public_folder: "/Portfolio/uploads"
+
+collections:
+  - name: "projects"
+    label: "Projets"
+    files:
+      - file: "content/projects.json"
+        label: "Projets du portfolio"
+        name: "projects"
+        format: "json"
+        fields:
+          - label: "Liste des projets"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.t}} · {{fields.y}}"
+            fields:
+              - { label: "Titre", name: "t", widget: "string" }
+              - { label: "Famille", name: "f", widget: "select", options: [{label: "Hydrologie & modélisation", value: "A"}, {label: "Eau potable & hydraulique", value: "B"}, {label: "Assainissement & drainage", value: "C"}, {label: "Aménagements hydro-agricoles", value: "D"}, {label: "SIG & analyse spatiale", value: "E"}, {label: "Académique & personnel", value: "F"}] }
+              - { label: "Année / période", name: "y", widget: "string", required: false }
+              - { label: "Résumé", name: "s", widget: "text", required: false }
+              - { label: "Contexte", name: "c", widget: "text", required: false }
+              - { label: "Objectif", name: "o", widget: "text", required: false }
+              - { label: "Mon rôle", name: "r", widget: "text", required: false }
+              - { label: "Approche / méthode", name: "m", widget: "text", required: false }
+              - { label: "Outils", name: "u", widget: "text", required: false }
+              - { label: "Résultats / livrables", name: "l", widget: "text", required: false }
+              - { label: "Compétences mobilisées", name: "k", widget: "text", required: false }
+              - label: "Médias et liens"
+                name: "media"
+                widget: "list"
+                required: false
+                fields:
+                  - { label: "Type", name: "k", widget: "select", options: [{label: "Photo", value: "photo"}, {label: "Carte", value: "map"}, {label: "PDF / document", value: "pdf"}, {label: "Vidéo", value: "video"}, {label: "Lien de rapport existant", value: "doc"}] }
+                  - { label: "Adresse du fichier ou lien", name: "src", widget: "string", required: false }
+                  - { label: "Référence interne existante", name: "ref", widget: "string", required: false }
+                  - { label: "Légende / texte du lien", name: "cap", widget: "string", required: false }
+                  - { label: "Image d’aperçu de la vidéo", name: "poster", widget: "string", required: false }
+              - { label: "Brouillon (ne pas afficher)", name: "draft", widget: "boolean", required: false, default: false }
+
+  - name: "education"
+    label: "Parcours"
+    files:
+      - file: "content/education.json"
+        label: "Formation et parcours"
+        name: "education"
+        format: "json"
+        fields:
+          - label: "Étapes du parcours"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.t}}"
+            fields:
+              - { label: "Période", name: "y", widget: "string" }
+              - { label: "Diplôme / étape", name: "t", widget: "string" }
+              - { label: "Établissement", name: "w", widget: "string", required: false }
+              - { label: "Précisions", name: "k", widget: "text", required: false }
+
+  - name: "experiences"
+    label: "Expériences"
+    files:
+      - file: "content/experiences.json"
+        label: "Expériences professionnelles"
+        name: "experiences"
+        format: "json"
+        fields:
+          - label: "Expériences"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.t}} · {{fields.d}}"
+            fields:
+              - { label: "Période", name: "d", widget: "string" }
+              - { label: "Intitulé", name: "t", widget: "string" }
+              - { label: "Poste / rôle", name: "r", widget: "string", required: false }
+              - { label: "Organisme / lieu", name: "o", widget: "string", required: false }
+              - label: "Missions et réalisations"
+                name: "b"
+                widget: "list"
+                field: { label: "Mission", name: "mission", widget: "string" }
+              - { label: "Expérience actuelle", name: "now", widget: "boolean", required: false, default: false }
+
+  - name: "certificates"
+    label: "Certifications"
+    files:
+      - file: "content/certificates.json"
+        label: "Certifications et formations courtes"
+        name: "certificates"
+        format: "json"
+        fields:
+          - label: "Liste des certifications"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.t}}"
+            fields:
+              - { label: "Intitulé", name: "t", widget: "string" }
+              - { label: "Organisme", name: "org", widget: "string" }
+              - { label: "Date", name: "date", widget: "string", required: false }
+              - { label: "Lien du document (facultatif)", name: "file", widget: "string", required: false }
+
+  - name: "carnet"
+    label: "Carnet de terrain"
+    files:
+      - file: "content/carnet.json"
+        label: "Sorties, visites et activités"
+        name: "carnet"
+        format: "json"
+        fields:
+          - label: "Entrées du carnet"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.t}}"
+            fields:
+              - { label: "Rubrique", name: "g", widget: "string" }
+              - { label: "Titre", name: "t", widget: "string" }
+              - { label: "Date", name: "date", widget: "string", required: false }
+              - { label: "Lieu", name: "lieu", widget: "string", required: false }
+              - { label: "Description", name: "txt", widget: "text", required: false }
+              - { label: "Photo / vidéo (URL ou chemin)", name: "img", widget: "string", required: false }
+              - { label: "Texte alternatif de l’image", name: "alt", widget: "string", required: false }
+
+  - name: "settings"
+    label: "Coordonnées et CV"
+    files:
+      - file: "content/settings.json"
+        label: "Paramètres du site"
+        name: "settings"
+        format: "json"
+        fields:
+          - { label: "Adresse e-mail de contact", name: "email", widget: "string", required: false }
+          - { label: "Lien du CV PDF (Google Drive ou autre)", name: "cv", widget: "string", required: false }
