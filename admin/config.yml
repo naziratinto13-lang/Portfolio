@@ -123,7 +123,12 @@ collections:
               - { label: "Date", name: "date", widget: "string", required: false }
               - { label: "Lieu", name: "lieu", widget: "string", required: false }
               - { label: "Description", name: "txt", widget: "text", required: false }
-              - { label: "Photo (à afficher directement)", name: "img", widget: "image", required: false }
+              - { label: "Photo principale (ancienne photo conservée)", name: "img", widget: "image", required: false }
+              - label: "Galerie de photos"
+                name: "imgs"
+                widget: "list"
+                required: false
+                field: { label: "Photo", name: "photo", widget: "image" }
               - { label: "Texte alternatif de l’image", name: "alt", widget: "string", required: false }
 
   - name: "settings"
