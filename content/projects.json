@@ -1,7 +1,7 @@
 {
   "items": [
     {
-      "c": "Projet de groupe de la formation GEAAH (S5, année scolaire 2023–2024), à partir d'un plan d'occupation établi.",
+      "c": "Projet de groupe de la formation GEAAH, à partir d'un plan d'occupation établi.",
       "media": [
         {
           "k": "pdf",
@@ -17,15 +17,14 @@
       "o": "Dimensionner un système d'adduction en eau potable pour une ville de 12 036 habitants (horizon 2033).",
       "s": "Dimensionnement d'un système d'AEP, du forage à la distribution, pour 12 036 habitants à l'horizon 2033.",
       "t": "Adduction en eau potable d'une ville",
-      "y": "2023–24"
+      "y": "2023–2024"
     },
     {
-      "c": "Projet de groupe de la formation GEAAH (S5, année scolaire 2023–2024), sur une zone résidentielle de six blocs, à partir d'un plan cadastral avec altitudes.",
+      "c": "Projet de groupe de la formation GEAAH, sur une zone résidentielle de six blocs, à partir d'un plan cadastral avec altitudes.",
       "media": [
         {
-          "k": "doc",
-          "ref": "ap",
-          "cap": "Consulter le rapport (13 pages)"
+          "k": "pdf",
+          "src": "https://drive.google.com/file/d/1C_89Ac65A1o-wj7Pg44GtY-AzIcJl5Q8/view?usp=sharing"
         }
       ],
       "f": "C",
@@ -36,17 +35,27 @@
       "s": "Six bassins versants et un collecteur principal de cinq tronçons dimensionné jusqu'à l'exutoire.",
       "t": "Réseau d'assainissement pluvial d'une zone résidentielle",
       "u": "Plan cadastral · Word · Excel",
-      "y": "2023–24"
+      "y": "2023–2024"
     },
     {
-      "f": "B",
-      "y": "2025",
-      "t": "Dimensionnement du réseau d'alimentation en eau de la cité de Bassemyam",
-      "s": "Stage à l'ONEA : appui au dimensionnement et à la simulation hydraulique du réseau.",
       "c": "Stage d'assistante aux études hydrauliques à l'Office National de l'Eau et de l'Assainissement (ONEA), Ouagadougou, juin–sept. 2025.",
-      "o": "Appui à l'étude de dimensionnement et à la simulation hydraulique du réseau d'eau de la cité de Bassemyam.",
+      "media": [
+        {
+          "k": "pdf",
+          "src": "https://drive.google.com/file/d/1TlxpJ-iETgJnlL5dPaO3LVHTn2cCeGg7/view?usp=sharing"
+        },
+        {
+          "k": "photo",
+          "src": "https://drive.google.com/file/d/1W_4VTJyv_wuE5N3tiEpmdxay8Cb-TFiR/view?usp=drive_link"
+        }
+      ],
+      "f": "B",
+      "o": "Appui à l'étude de dimensionnement et à la simulation hydraulique du réseau d'eau de la cité de Bassemyam et proposition de solution pour améliorer la desserte en eau.",
       "r": "Stagiaire — assistante aux études hydrauliques.",
-      "u": "EPANET · AutoCAD · QGIS · Global Mapper · Excel"
+      "s": "Stage à l'ONEA : appui au dimensionnement et à la simulation hydraulique du réseau.",
+      "t": "Dimensionnement du réseau d'alimentation en eau de la cité de Bassemyam",
+      "u": "EPANET · AutoCAD · QGIS · Global Mapper · Excel",
+      "y": "2025"
     },
     {
       "c": "Stage d'assistante aux études hydrologiques chez Global Engineering for Africa (GEFA), Ouagadougou, janv.–avr. 2024.",
