@@ -102,7 +102,8 @@ collections:
               - { label: "Intitulé", name: "t", widget: "string" }
               - { label: "Organisme", name: "org", widget: "string" }
               - { label: "Date", name: "date", widget: "string", required: false }
-              - { label: "Lien du document (facultatif)", name: "file", widget: "string", required: false }
+              - { label: "Image du certificat (facultatif)", name: "img", widget: "image", required: false }
+              - { label: "Lien du document PDF (facultatif)", name: "file", widget: "string", required: false }
 
   - name: "carnet"
     label: "Carnet de terrain"
@@ -122,7 +123,7 @@ collections:
               - { label: "Date", name: "date", widget: "string", required: false }
               - { label: "Lieu", name: "lieu", widget: "string", required: false }
               - { label: "Description", name: "txt", widget: "text", required: false }
-              - { label: "Photo / vidéo (URL ou chemin)", name: "img", widget: "string", required: false }
+              - { label: "Photo (à afficher directement)", name: "img", widget: "image", required: false }
               - { label: "Texte alternatif de l’image", name: "alt", widget: "string", required: false }
 
   - name: "settings"
