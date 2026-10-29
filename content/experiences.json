@@ -1,0 +1,56 @@
+{
+  "items": [
+    {
+      "d": "juin–août 2023",
+      "t": "Suivi et contrôle des travaux de la voie d'accès au quartier de Bassinko",
+      "r": "Stagiaire — Assistante au suivi et au contrôle des travaux",
+      "o": "Global Engineering for Africa (GEFA) — Ouagadougou",
+      "b": [
+        "Appui au suivi de l'exécution des travaux de génie civil et au contrôle de la qualité des matériaux."
+      ]
+    },
+    {
+      "d": "janv.–avr. 2024",
+      "t": "Dimensionnement du réseau d'assainissement de la voie d'accès au quartier de Bassinko",
+      "r": "Stagiaire — Assistante aux études hydrologiques",
+      "o": "Global Engineering for Africa (GEFA) — Ouagadougou",
+      "b": [
+        "Appui aux études hydrologiques et hydrauliques de la voie d'accès de Bassinko.",
+        "Contribution au calcul des débits de projet et au dimensionnement des ouvrages d'assainissement avec QGIS, AutoCAD et Excel."
+      ]
+    },
+    {
+      "d": "juin–sept. 2025",
+      "t": "Dimensionnement du réseau d'alimentation en eau de la cité de Bassemyam",
+      "r": "Stagiaire — Assistante aux études hydrauliques",
+      "o": "Office National de l'Eau et de l'Assainissement (ONEA) — Ouagadougou",
+      "b": [
+        "Appui à l'étude de dimensionnement et à la simulation hydraulique du réseau d'eau de la cité de Bassemyam.",
+        "Mobilisation d'outils de conception et d'analyse : EPANET, AutoCAD, QGIS, Global Mapper et Excel."
+      ]
+    },
+    {
+      "d": "févr.–juil. 2026",
+      "t": "Stage de recherche en master",
+      "r": "Stagiaire en recherche",
+      "o": "Laboratoire LEHSA, Institut 2iE — Ouagadougou",
+      "b": [
+        "Modélisation hydrologique de 17 bassins versants intermittents du Burkina Faso avec GR6J, HBV et IHACRES.",
+        "Intégration de données satellitaires d'évapotranspiration réelle (GLEAM v4.3a) à la calibration des modèles et comparaison de scénarios de calibration.",
+        "Traitement et analyse de données hydroclimatiques et satellitaires ; évaluation des modèles (KGE, NSE, PBIAS) et scripts sous R."
+      ]
+    },
+    {
+      "d": "sept. 2026 – en cours",
+      "t": "Appui à un projet doctoral",
+      "r": "Stagiaire en recherche — Appui à un projet doctoral",
+      "o": "Institut 2iE — Ouagadougou",
+      "b": [
+        "Création et structuration de bases de données pour un projet de modélisation hydrologique.",
+        "Mise en œuvre du modèle SWAT avec le package RSWAT sur les bassins nationaux du Burkina Faso (Mouhoun, Niger, Comoé et Nakambé) ; simulations et calage.",
+        "Test de la chaîne de simulation sur le bassin de Wayen pour la période 1991–2020."
+      ],
+      "now": 1
+    }
+  ]
+}
