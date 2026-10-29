@@ -1,41 +1,41 @@
 {
   "items": [
     {
-      "f": "B",
-      "y": "2023–24",
-      "t": "Adduction en eau potable d'une ville",
-      "s": "Dimensionnement d'un système d'AEP, du forage à la distribution, pour 12 036 habitants à l'horizon 2033.",
       "c": "Projet de groupe de la formation GEAAH (S5, année scolaire 2023–2024), à partir d'un plan d'occupation établi.",
-      "o": "Dimensionner un système d'adduction en eau potable pour une ville de 12 036 habitants (horizon 2033).",
-      "m": "Besoins de pointe (domestiques, équipements annexes, pertes de réseau de 15 %), ressource souterraine (cinq forages de 30 m³/h), conduites forage-bâche et bâche-réservoir comparées par plusieurs formules (Bresse, Munier, Bonin, Bedjaoui), dimensionnement de la bâche, puis du réseau maillé par la méthode de Hardy Cross.",
-      "l": "Besoin total de pointe de 1 601 m³/j couvert par cinq forages (1 650 m³ en 11 h de pompage) ; conduites de 140 mm (forage-bâche) et 315 mm (bâche-réservoir) de diamètre extérieur ; réseau maillé équilibré en 5 itérations (|J| ≤ 0,2 m, |ΔQ| ≤ 0,5 l/s).",
-      "k": "Estimation des besoins en eau · dimensionnement de conduites · stockage (bâche, réservoir) · réseau maillé (Hardy Cross) · travail en équipe",
       "media": [
         {
           "k": "doc",
           "ref": "aep",
           "cap": "Consulter le rapport (10 pages)"
         }
-      ]
+      ],
+      "f": "B",
+      "k": "Estimation des besoins en eau · dimensionnement de conduites · stockage (bâche, réservoir) · réseau maillé (Hardy Cross) · travail en équipe",
+      "l": "Besoin total de pointe de 1 601 m³/j couvert par cinq forages (1 650 m³ en 11 h de pompage) ; conduites de 140 mm (forage-bâche) et 315 mm (bâche-réservoir) de diamètre extérieur ; réseau maillé équilibré en 5 itérations (|J| ≤ 0,2 m, |ΔQ| ≤ 0,5 l/s).",
+      "m": "Besoins de pointe (domestiques, équipements annexes, pertes de réseau de 15 %), ressource souterraine (cinq forages de 30 m³/h), conduites forage-bâche et bâche-réservoir comparées par plusieurs formules (Bresse, Munier, Bonin, Bedjaoui), dimensionnement de la bâche, puis du réseau maillé par la méthode de Hardy Cross.",
+      "o": "Dimensionner un système d'adduction en eau potable pour une ville de 12 036 habitants (horizon 2033).",
+      "s": "Dimensionnement d'un système d'AEP, du forage à la distribution, pour 12 036 habitants à l'horizon 2033.",
+      "t": "Adduction en eau potable d'une ville2",
+      "y": "2023–24"
     },
     {
-      "f": "C",
-      "y": "2023–24",
-      "t": "Réseau d'assainissement pluvial d'une zone résidentielle",
-      "s": "Six bassins versants et un collecteur principal de cinq tronçons dimensionné jusqu'à l'exutoire.",
       "c": "Projet de groupe de la formation GEAAH (S5, année scolaire 2023–2024), sur une zone résidentielle de six blocs, à partir d'un plan cadastral avec altitudes.",
-      "o": "Délimiter les bassins versants, placer l'exutoire et dimensionner le collecteur principal du réseau pluvial.",
-      "m": "Exutoire au point le plus bas (écoulement gravitaire), collecteur tracé selon les plus faibles altitudes ; débits par la méthode rationnelle (période de retour 10 ans, formule de Montana, temps de concentration de Kirpich) ; canaux rectangulaires en béton armé dimensionnés avec la méthode de la SHF, Manning-Strickler et la revanche de Lacey ; profondeurs et cotes de pose.",
-      "u": "Plan cadastral · Word · Excel",
-      "l": "Débit de projet de 0,99 m³/s sur le dernier tronçon (T = 10 ans), pour un canal de 1,20 m de large et 0,76 m de haut. Recommandations : maintenance du réseau et bassin de rétention.",
-      "k": "Délimitation de bassins versants · méthode rationnelle · dimensionnement hydraulique de canaux · cotes de pose",
       "media": [
         {
           "k": "doc",
           "ref": "ap",
           "cap": "Consulter le rapport (13 pages)"
         }
-      ]
+      ],
+      "f": "C",
+      "k": "Délimitation de bassins versants · méthode rationnelle · dimensionnement hydraulique de canaux · cotes de pose",
+      "l": "Débit de projet de 0,99 m³/s sur le dernier tronçon (T = 10 ans), pour un canal de 1,20 m de large et 0,76 m de haut. Recommandations : maintenance du réseau et bassin de rétention.",
+      "m": "Exutoire au point le plus bas (écoulement gravitaire), collecteur tracé selon les plus faibles altitudes ; débits par la méthode rationnelle (période de retour 10 ans, formule de Montana, temps de concentration de Kirpich) ; canaux rectangulaires en béton armé dimensionnés avec la méthode de la SHF, Manning-Strickler et la revanche de Lacey ; profondeurs et cotes de pose.",
+      "o": "Délimiter les bassins versants, placer l'exutoire et dimensionner le collecteur principal du réseau pluvial.",
+      "s": "Six bassins versants et un collecteur principal de cinq tronçons dimensionné jusqu'à l'exutoire.",
+      "t": "Réseau d'assainissement pluvial d'une zone résidentielle",
+      "u": "Plan cadastral · Word · Excel",
+      "y": "2023–24"
     },
     {
       "f": "B",
@@ -48,15 +48,15 @@
       "u": "EPANET · AutoCAD · QGIS · Global Mapper · Excel"
     },
     {
-      "f": "C",
-      "y": "2024",
-      "t": "Dimensionnement du réseau d'assainissement de la voie d'accès au quartier de Bassinko",
-      "s": "Stage chez GEFA : calcul des débits de projet et dimensionnement des ouvrages d'assainissement.",
       "c": "Stage d'assistante aux études hydrologiques chez Global Engineering for Africa (GEFA), Ouagadougou, janv.–avr. 2024.",
+      "f": "C",
+      "m": "Contribution au calcul des débits de projet et au dimensionnement des ouvrages d'assainissement.",
       "o": "Appui aux études hydrologiques et hydrauliques de la voie d'accès de Bassinko.",
       "r": "Stagiaire — assistante aux études hydrologiques.",
-      "m": "Contribution au calcul des débits de projet et au dimensionnement des ouvrages d'assainissement.",
-      "u": "QGIS · AutoCAD · Excel"
+      "s": "Stage chez GEFA : calcul des débits de projet et dimensionnement des ouvrages d'assainissement.",
+      "t": "Dimensionnement du réseau d'assainissement de la voie d'accès au quartier de Bassinko",
+      "u": "QGIS · AutoCAD · Excel",
+      "y": "2024"
     },
     {
       "f": "C",
@@ -68,15 +68,15 @@
       "r": "Stagiaire — assistante au suivi et au contrôle des travaux."
     },
     {
-      "f": "A",
-      "y": "2026",
-      "t": "Appui à un projet doctoral : modèle SWAT sur les bassins nationaux du Burkina Faso",
-      "s": "Mise en œuvre de SWAT avec RSWAT sur les bassins du Mouhoun, du Niger, de la Comoé et du Nakambé.",
       "c": "Stage de recherche (appui à un projet doctoral), Institut 2iE, Ouagadougou, depuis sept. 2026.",
-      "o": "Mettre en œuvre le modèle SWAT avec le package RSWAT sur les bassins nationaux du Burkina Faso (Mouhoun, Niger, Comoé et Nakambé).",
+      "f": "A",
       "m": "Création et structuration de bases de données ; simulations et calage ; test de la chaîne de simulation sur le bassin de Wayen pour la période 1991–2020.",
+      "o": "Mettre en œuvre le modèle SWAT avec le package RSWAT sur les bassins nationaux du Burkina Faso (Mouhoun, Niger, Comoé et Nakambé).",
       "r": "Stagiaire en recherche — appui à un projet doctoral.",
-      "u": "SWAT · RSWAT"
+      "s": "Mise en œuvre de SWAT avec RSWAT sur les bassins du Mouhoun, du Niger, de la Comoé et du Nakambé.",
+      "t": "Appui à un projet doctoral : modèle SWAT sur les bassins nationaux du Burkina Faso",
+      "u": "SWAT · RSWAT",
+      "y": "2026"
     },
     {
       "f": "E",
