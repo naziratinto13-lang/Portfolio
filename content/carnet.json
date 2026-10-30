@@ -7,56 +7,73 @@
     },
     {
       "g": "Sorties et visites techniques",
-      "t": "Gestion des déchets solides"
+      "t": "Gestion des déchets solides",
+      "img": "/Portfolio/uploads/centre-de-traitement-des-déchets.mp4"
     },
     {
       "g": "Sorties et visites techniques",
-      "t": "Aménagement des bas-fonds"
+      "t": "Aménagement des bas-fonds",
+      "img": "/Portfolio/uploads/bas-fond-de-sapone.mp4"
     },
     {
       "g": "Sorties et visites techniques",
-      "t": "Procédés de traitement des eaux de consommation"
+      "t": "Procédés de traitement des eaux de consommation",
+      "img": "/Portfolio/uploads/station-traitement-des-eaux-de-consommation.mp4",
+      "imgs": [
+        null
+      ]
     },
     {
       "g": "Sorties et visites techniques",
-      "t": "Procédés de traitement des eaux usées"
+      "t": "Procédés de traitement des eaux usées",
+      "img": "/Portfolio/uploads/station-de-traitement-des-eaux-usées-2-.jpeg"
     },
     {
       "g": "Sorties et visites techniques",
-      "t": "Télégestion et recherche des fuites"
+      "t": "Télégestion et recherche des fuites",
+      "img": "/Portfolio/uploads/télégestion-2-.jpeg"
     },
     {
       "g": "Sorties et visites techniques",
-      "t": "Diagnostic des aménagements hydro-agricoles"
+      "t": "Diagnostic des aménagements hydro-agricoles",
+      "img": "/Portfolio/uploads/diagnostic-des-aménagments-2-.jpeg",
+      "imgs": [
+        "/Portfolio/uploads/diagnostic-des-aménagements.jpeg"
+      ]
     },
     {
       "g": "Sorties et visites techniques",
-      "t": "Diagnostic des STEP"
-    },
-    {
-      "g": "Sorties et visites techniques",
-      "t": "Technique d'implantation des forages"
+      "t": "Technique d'implantation des forages",
+      "img": "/Portfolio/uploads/whatsapp-image-2026-07-24-at-16.55.33-3-.jpeg",
+      "imgs": [
+        "/Portfolio/uploads/whatsapp-image-2026-07-24-at-16.55.33.jpeg"
+      ]
     },
     {
       "g": "Activités",
-      "t": "Reboisement"
+      "t": "Reboisement",
+      "img": "/Portfolio/uploads/reboisement.png"
     },
     {
       "g": "Activités",
-      "t": "Doctoriales 2025"
+      "t": "Doctoriales 2025",
+      "img": "/Portfolio/uploads/doctoriales-2025.jpeg"
     },
     {
       "g": "Activités",
-      "t": "SITHAO"
+      "t": "SITHAO",
+      "img": "/Portfolio/uploads/salon-international-des-toilettes-sitao-.jpeg"
     },
     {
       "g": "Activités",
-      "t": "Activité de sensibilisation à l'hygiène au complexe EPHATA"
+      "t": "Activité de sensibilisation à l'hygiène au complexe EPHATA",
+      "img": "/Portfolio/uploads/sensibilisation-à-l-hygiène-dans-une-école.mp4"
     },
     {
       "g": "Distinction",
       "t": "Wall of Women — 1re édition, session 2026",
-      "txt": "Honneur d'être sur la première édition du « Wall of Women »."
+      "txt": "Honneur d'être sur la première édition du « Wall of Women ».",
+      "img": "/Portfolio/uploads/wall-of-women.jpeg"
     }
   ]
 }
