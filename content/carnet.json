@@ -2,11 +2,8 @@
   "items": [
     {
       "g": "Sorties et visites techniques",
-      "t": "Assainissement autonome"
-    },
-    {
-      "g": "Sorties et visites techniques",
-      "t": "Gestion et traitement des boues de vidange"
+      "t": "Gestion et traitement des boues de vidange",
+      "img": "/Portfolio/uploads/station-de-boue-de-vidange.jpeg"
     },
     {
       "g": "Sorties et visites techniques",
