@@ -233,6 +233,19 @@ nav a{padding:12px 0}
 @media (max-width:860px){.cg{grid-template-columns:1fr;gap:12px;margin-top:44px}}
 .cg>*{min-width:0}.cx .t,.cx .cap,.tl h3,.tl p{overflow-wrap:anywhere}
 .cl{display:block;margin-top:24px}
+/* Galerie photo et agrandissement */
+.cx .ph{margin:12px 0 0;max-width:100%;display:flex;flex-wrap:wrap;gap:12px}
+.cx .ph a{display:block;flex:0 1 220px;max-width:min(100%,220px);border:1px solid var(--hair);background:var(--s);cursor:zoom-in}
+.cx .ph img{width:100%;height:auto;max-height:260px;object-fit:cover;display:block}
+.cr .th{cursor:zoom-in;padding:0;background:var(--s);font:500 .62rem var(--mono)}
+.cr .th img{width:100%;height:100%;object-fit:cover;display:block}
+.photo-lightbox{width:min(94vw,1100px);max-width:none;max-height:94vh;padding:16px;border:1px solid var(--hair);background:var(--i);color:var(--n);box-shadow:0 18px 70px rgba(0,0,0,.28)}
+.photo-lightbox::backdrop{background:rgba(14,25,31,.82)}
+.photo-lightbox .lightbox-close{display:block;margin:0 0 10px auto;border:1px solid var(--hair);background:transparent;color:inherit;padding:8px 14px;font:inherit;cursor:pointer}
+.photo-lightbox img{display:block;max-width:100%;max-height:calc(94vh - 82px);width:auto;height:auto;margin:0 auto;object-fit:contain}
+.photo-lightbox p{margin:8px 0 0;text-align:center;font:.8rem var(--mono);color:var(--g)}
+.photo-open:focus-visible,.ph a:focus-visible{outline:2px solid var(--w);outline-offset:3px}
+@media (max-width:600px){.cx .ph a{flex-basis:calc(50% - 6px);max-width:none}.photo-lightbox{padding:10px}}
 </style>
 </head>
 <body>
@@ -353,6 +366,11 @@ nav a{padding:12px 0}
  <a class="btn p" id="cv" href="cv/Nazira-Tinto-CV.pdf" download>Télécharger mon CV <i>↓</i></a>
 </div></section>
 </main>
+<dialog class="photo-lightbox" id="photo-lightbox" aria-label="Aperçu de la photographie">
+  <button class="lightbox-close" type="button" aria-label="Fermer l’aperçu">Fermer ×</button>
+  <img id="lightbox-image" src="" alt="">
+  <p id="lightbox-caption"></p>
+</dialog>
 <footer class="mono">Nazira Tinto — Hydrologie & modélisation · Afrique de l'Ouest</footer>
 
 <script>
@@ -421,7 +439,17 @@ drawProjects();
 $("#tl").innerHTML = T.filter(x => SHOW_DRAFTS || !x.draft).map(x => x.draft ? `<li class="dr"><span class="mono">${x.y}</span><h3>À compléter</h3></li>` : `<li${x.k?' class="now"':""}><span class="mono">${x.y}</span><h3>${x.t}</h3>${x.w?`<p>${x.w}</p>`:""}${x.k?`<p class="mono">${x.k}</p>`:""}</li>`).join("");
 $("#st").innerHTML = STAGES.map(s => `<li${s.now?' class="now"':""}><span class="mono">${s.d}</span><h3>${s.t}</h3><p>${s.r} · ${s.o}</p>${s.b.map(x=>`<p class="bl">${x}</p>`).join("")}</li>`).join("");
 $("#ch").innerHTML = CH.map((t,i) => `<li style="--i:${i}"><i class="d"></i><span>${t}</span></li>` + (i<CH.length-1 ? `<li class="c" style="--i:${i}" aria-hidden="true"><svg viewBox="0 0 20 30"><path d="M10 0C2 8 18 20 10 30"/></svg></li>` : "")).join("");
-$("#cr").innerHTML = CERT.map((c,i) => `<li><span class="mono">0${i+1}</span><div><span class="t">${c.t}</span><br><span class="mono">${c.org} · ${c.date}</span></div>${c.file ? (/\.pdf$/i.test(c.file) ? `<a class="th" href="${c.file}" target="_blank" rel="noopener">PDF<br>ouvrir</a>` : `<a class="th" href="${c.file}" target="_blank" rel="noopener"><img src="${c.file}" alt="Certificat : ${c.t}" loading="lazy"></a>`) : '<span class="th">aperçu à ajouter</span>'}</li>`).join("");
+$("#cr").innerHTML = CERT.map((c,i) => {
+  const legacyImage = c.file && !/\.pdf(?:[?#].*)?$/i.test(c.file) ? c.file : "";
+  const image = c.img || legacyImage;
+  const pdf = c.file && /\.pdf(?:[?#].*)?$/i.test(c.file) ? c.file : "";
+  const preview = image
+    ? `<a class="th photo-open" href="${image}" data-lightbox="${image}" data-caption="Certificat : ${c.t}" aria-label="Agrandir le certificat : ${c.t}"><img src="${image}" alt="Certificat : ${c.t}" loading="lazy"></a>`
+    : pdf ? `<a class="th" href="${pdf}" target="_blank" rel="noopener">PDF<br>ouvrir</a>`
+    : '<span class="th">aperçu à ajouter</span>';
+  const pdfLink = pdf && image ? `<a class="mono cert-pdf" href="${pdf}" target="_blank" rel="noopener">Consulter le PDF ↗</a>` : "";
+  return `<li><span class="mono">0${i+1}</span><div><span class="t">${c.t}</span><br><span class="mono">${c.org} · ${c.date}</span>${pdfLink}</div>${preview}</li>`;
+}).join("");
 /* contact */
 if(!EMAIL && !SHOW_DRAFTS){ $("#em").previousElementSibling.remove(); $("#em").remove(); } else $("#em").innerHTML = EMAIL ? `<a href="mailto:${EMAIL}">${EMAIL}</a>` : '<span class="mono">à renseigner</span>';
 /* scroll : rail, en-tête, section active, apparitions */
@@ -429,12 +457,34 @@ const cl = $("#cl");
 if(cl){
   const groups = [];
   CARNET.forEach(e => {let g = groups.find(x => x.n===e.g); if(!g){g = {n:e.g,items:[]}; groups.push(g)} g.items.push(e)});
-  cl.innerHTML = groups.map(g => `<div class="cg"><div><h3>${g.n}</h3><p class="mono">${g.items.length} ${g.items.length>1?"entrées":"entrée"}</p></div><ul class="cx">${g.items.map(e => `<li><div><span class="t">${e.t}</span>${(e.date||e.lieu)?`<span class="mono">${[e.date,e.lieu].filter(Boolean).join(" · ")}</span>`:""}${e.txt?`<p class="cap">${e.txt}</p>`:""}${e.img?`<figure class="ph"><img src="${e.img}" alt="${e.alt||e.t}" loading="lazy"></figure>`:""}</div></li>`).join("")}</ul></div>`).join("");
+  cl.innerHTML = groups.map(g => `<div class="cg"><div><h3>${g.n}</h3><p class="mono">${g.items.length} ${g.items.length>1?"entrées":"entrée"}</p></div><ul class="cx">${g.items.map(e => {
+    const photos = [...new Set([...(Array.isArray(e.imgs) ? e.imgs : []), ...(e.img ? [e.img] : [])].filter(Boolean))];
+    const gallery = photos.length ? `<figure class="ph">${photos.map((src,n) => `<a href="${src}" class="photo-open" data-lightbox="${src}" data-caption="${e.alt||e.t}${photos.length>1 ? ` · Photo ${n+1}/${photos.length}` : ""}" aria-label="Agrandir la photo ${n+1} : ${e.alt||e.t}"><img src="${src}" alt="${e.alt||e.t}${photos.length>1 ? ` — photo ${n+1}` : ""}" loading="lazy"></a>`).join("")}</figure>` : "";
+    return `<li><div><span class="t">${e.t}</span>${(e.date||e.lieu)?`<span class="mono">${[e.date,e.lieu].filter(Boolean).join(" · ")}</span>`:""}${e.txt?`<p class="cap">${e.txt}</p>`:""}${gallery}</div></li>`;
+  }).join("")}</ul></div>`).join("");
 }
 const SEQ = ["Terrain","Données","Analyse","Modélisation","Décision"];
 $("#sq").innerHTML = SEQ.map((t,i) => `<li>${t}</li>` + (i<SEQ.length-1 ? '<li class="c" aria-hidden="true"><svg viewBox="0 0 64 20"><path d="M0 10C14 0 24 20 40 10S56 4 64 10"/></svg></li>' : "")).join("");
 const cv = $("#cv");
 if(CV) cv.href = CV; else if(!SHOW_DRAFTS) cv.remove(); else {cv.removeAttribute("href");cv.removeAttribute("download");cv.setAttribute("aria-disabled","true");cv.insertAdjacentHTML("beforeend",' <span class="mono">(fichier à ajouter)</span>')}
+/* ouverture des photos en grand format */
+const lightbox = $("#photo-lightbox");
+const lightboxImage = $("#lightbox-image");
+const lightboxCaption = $("#lightbox-caption");
+if(lightbox && lightboxImage){
+  document.addEventListener("click", event => {
+    const trigger = event.target.closest("a[data-lightbox]");
+    if(!trigger) return;
+    event.preventDefault();
+    lightboxImage.src = trigger.dataset.lightbox;
+    lightboxImage.alt = trigger.querySelector("img")?.alt || trigger.dataset.caption || "Photographie";
+    lightboxCaption.textContent = trigger.dataset.caption || "";
+    if(typeof lightbox.showModal === "function") lightbox.showModal();
+  });
+  lightbox.querySelector(".lightbox-close").addEventListener("click", () => lightbox.close());
+  lightbox.addEventListener("click", event => { if(event.target === lightbox) lightbox.close(); });
+  lightbox.addEventListener("close", () => { lightboxImage.removeAttribute("src"); lightboxImage.alt = ""; });
+}
 /* scroll : barre-rivière alignée sur les vraies sections */
 const hd = document.querySelector("header");
 const secs = SEC.map(([i]) => document.getElementById(i));
