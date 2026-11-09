@@ -1,25 +1,23 @@
 {
   "items": [
     {
-      "y": "2014 — 2021",
+      "y": "SEPT 2014 — JUIL 2021",
       "t": "Baccalauréat en sciences de la nature",
-      "w": "PMK"
+      "w": "PMK",
+      "k": "Baccalauréat en science de la nature obtenu avec la mention Bien"
     },
     {
-      "y": "2021 — 2024",
+      "y": "SEPT 2021 — JUIL 2024",
       "t": "Bachelor en génie de l'eau, de l'assainissement et des aménagements hydro-agricoles"
     },
     {
-      "y": "2024 — 2026",
+      "y": "SEPT 2024 — JUIL 2026",
       "t": "Master en génie de l'eau, de l'assainissement et des aménagements hydro-agricoles",
-      "w": "2iE — Institut International d'Ingénierie de l'Eau et de l'Environnement"
+      "w": "2iE — Institut International d'Ingénierie de l'Eau et de l'Environnement",
+      "k": "Master en génie de l'eau, de l'assainissement et des aménagements hydro-agricoles avec la mention Très bien me permettant ainsi d'obtenir le diplôme d'Ingénieur 2iE avec grade de Master"
     },
     {
-      "y": "2026",
-      "t": "Soutenance du Master"
-    },
-    {
-      "y": "2026 — aujourd'hui",
+      "y": "SEPT 2026 — aujourd'hui",
       "t": "Recherche · projets · développement professionnel",
       "k": "Hydrologie · modélisation · SIG · données satellitaires · ingénierie de l'eau"
     }
