@@ -458,9 +458,12 @@ if(cl){
   const groups = [];
   CARNET.forEach(e => {let g = groups.find(x => x.n===e.g); if(!g){g = {n:e.g,items:[]}; groups.push(g)} g.items.push(e)});
   cl.innerHTML = groups.map(g => `<div class="cg"><div><h3>${g.n}</h3><p class="mono">${g.items.length} ${g.items.length>1?"entrées":"entrée"}</p></div><ul class="cx">${g.items.map(e => {
-    const photos = [...new Set([...(Array.isArray(e.imgs) ? e.imgs : []), ...(e.img ? [e.img] : [])].filter(Boolean))];
+    const isVideo = src => /\.(mp4|webm|ogg)(?:[?#].*)?$/i.test(src || "");
+    const photos = [...new Set([...(Array.isArray(e.imgs) ? e.imgs : []), ...(e.img && !isVideo(e.img) ? [e.img] : [])].filter(Boolean))];
     const gallery = photos.length ? `<figure class="ph">${photos.map((src,n) => `<a href="${src}" class="photo-open" data-lightbox="${src}" data-caption="${e.alt||e.t}${photos.length>1 ? ` · Photo ${n+1}/${photos.length}` : ""}" aria-label="Agrandir la photo ${n+1} : ${e.alt||e.t}"><img src="${src}" alt="${e.alt||e.t}${photos.length>1 ? ` — photo ${n+1}` : ""}" loading="lazy"></a>`).join("")}</figure>` : "";
-    return `<li><div><span class="t">${e.t}</span>${(e.date||e.lieu)?`<span class="mono">${[e.date,e.lieu].filter(Boolean).join(" · ")}</span>`:""}${e.txt?`<p class="cap">${e.txt}</p>`:""}${gallery}</div></li>`;
+    const videoItems = [...(Array.isArray(e.videos) ? e.videos : []), ...(e.img && isVideo(e.img) ? [{src:e.img,cap:""}] : [])];
+    const videoHTML = videoItems.filter(v => typeof v === "string" ? v : v && v.src).map(v => { const src = typeof v === "string" ? v : v.src; const cap = typeof v === "string" ? "" : (v.cap || ""); return `<figure class="ph"><video controls playsinline preload="metadata" src="${src}"></video>${cap ? `<figcaption class="cap">${cap}</figcaption>` : ""}</figure>`; }).join("");
+    return `<li><div><span class="t">${e.t}</span>${(e.date||e.lieu)?`<span class="mono">${[e.date,e.lieu].filter(Boolean).join(" · ")}</span>`:""}${e.txt?`<p class="cap">${e.txt}</p>`:""}${gallery}${videoHTML}</div></li>`;
   }).join("")}</ul></div>`).join("");
 }
 const SEQ = ["Terrain","Données","Analyse","Modélisation","Décision"];
