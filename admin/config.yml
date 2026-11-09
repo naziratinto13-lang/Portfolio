@@ -129,6 +129,13 @@ collections:
                 widget: "list"
                 required: false
                 field: { label: "Photo", name: "photo", widget: "image" }
+              - label: "Vidéos"
+                name: "videos"
+                widget: "list"
+                required: false
+                fields:
+                  - { label: "Fichier vidéo (MP4)", name: "src", widget: "file" }
+                  - { label: "Légende", name: "cap", widget: "string", required: false }
               - { label: "Texte alternatif de l’image", name: "alt", widget: "string", required: false }
 
   - name: "settings"
