@@ -3,22 +3,26 @@
     {
       "t": "Concevoir un projet de développement respectueux de l'environnement et des populations",
       "org": "Campus France",
-      "date": "17/12/2025"
+      "date": "17/12/2025",
+      "img": "/Portfolio/uploads/afd.png"
     },
     {
       "t": "Cadre environnemental et social de la Banque mondiale",
       "org": "Banque mondiale",
-      "date": "17/11/2025"
+      "date": "17/11/2025",
+      "img": "/Portfolio/uploads/banque_mondiale-.png"
     },
     {
       "t": "ISO 9001:2015 Quality Management System Awareness",
       "org": "Knights of Safety",
-      "date": "26/12/2025"
+      "date": "26/12/2025",
+      "img": "/Portfolio/uploads/iso9001.png"
     },
     {
-      "t": "ISO 9001:2015 Environmental Management System Awareness",
+      "t": "ISO 14001:2015 Environmental Management System Awareness",
       "org": "Knights of Safety",
-      "date": "26/12/2025"
+      "date": "26/12/2025",
+      "img": "/Portfolio/uploads/iso14001.png"
     }
   ]
 }
