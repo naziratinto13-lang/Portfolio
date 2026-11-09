@@ -147,4 +147,9 @@ collections:
         format: "json"
         fields:
           - { label: "Adresse e-mail de contact", name: "email", widget: "string", required: false }
+          - { label: "Photo de profil", name: "profile_photo", widget: "image", required: false }
+          - { label: "Présentation — paragraphe 1", name: "about1", widget: "text", required: false }
+          - { label: "Présentation — paragraphe 2", name: "about2", widget: "text", required: false }
+          - { label: "Présentation — paragraphe 3", name: "about3", widget: "text", required: false }
+          - { label: "Citation de conclusion", name: "about_quote", widget: "string", required: false }
           - { label: "Lien du CV PDF (Google Drive ou autre)", name: "cv", widget: "string", required: false }
