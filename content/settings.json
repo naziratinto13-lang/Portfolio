@@ -1,4 +1,9 @@
 {
   "email": "naziratinto13@gmail.com",
-  "cv": "https://drive.google.com/file/d/1uGVhhT51h3uFPjKqDVCUmc76WcBQ51J8/view?usp=sharing"
+  "cv": "https://drive.google.com/file/d/1uGVhhT51h3uFPjKqDVCUmc76WcBQ51J8/view?usp=sharing",
+  "profile_photo": "",
+  "about1": "Ingénieure en génie de l'eau, de l'assainissement et des aménagements hydro-agricoles, diplômée de 2iE. Ma formation couvre la conception, le diagnostic et la gestion des ouvrages hydrauliques. Mes stages (GEFA, ONEA, laboratoire LEHSA de 2iE) ont porté sur le suivi de travaux, l'assainissement, l'eau potable et la modélisation hydrologique.",
+  "about2": "J'aborde les ressources en eau par plusieurs entrées : l'ingénierie des ouvrages, les données spatiales et satellitaires, les SIG et la modélisation hydrologique.",
+  "about3": "Ces approches se rejoignent dans la recherche appliquée aux bassins versants d'Afrique de l'Ouest, avec une même ambition : mieux évaluer et mieux gérer les ressources en eau.",
+  "about_quote": "Comprendre l'eau pour mieux la gérer."
 }
