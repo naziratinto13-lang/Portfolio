@@ -67,7 +67,7 @@ h1 em{font-style:italic;display:block;padding-left:.6em}
 #bassin{width:100%;max-width:440px;justify-self:end;height:auto;overflow:visible}
 /* about */
 .ab{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(32px,6vw,96px);align-items:start}
-.pt{aspect-ratio:400/460;width:100%;max-width:360px;background:var(--s);clip-path:url(#cp);display:grid;place-items:center;text-align:center;padding:20%;color:var(--g)}
+.pt{aspect-ratio:400/460;width:100%;max-width:360px;background:var(--s);clip-path:none;border-radius:6px;overflow:hidden;display:grid;place-items:center;text-align:center;padding:0;color:var(--g)}.pt img{width:100%;height:100%;object-fit:cover;display:block;border-radius:6px}
 blockquote{font:italic 300 clamp(1.5rem,3vw,2.1rem)/1.25 var(--serif);margin:1.6em 0 0;padding-left:1.1em;border-left:2px solid var(--w);color:var(--b);max-width:24ch}
 .dv{display:block;width:min(420px,70%);margin:0 0 0 clamp(40px,7vw,120px);height:auto;overflow:visible;padding-block:8px}
 .dv path{stroke:var(--w);stroke-width:1.3}
@@ -361,7 +361,7 @@ nav a{padding:12px 0}
 <section id="contact" aria-labelledby="h-co"><div class="wrap ct rv">
  <svg class="out" viewBox="0 0 300 120" aria-hidden="true"><g class="flow-g"><path class="flow" pathLength="1" fill="none" d="M150 0C140 40 160 60 150 80C130 95 100 100 70 118M150 80C150 95 150 105 150 120M150 80C170 95 200 100 230 118"/></g></svg>
  <h2 id="h-co">Vous souhaitez échanger autour d'un projet, d'une collaboration ou d'une opportunité ?</h2>
- <dl class="ln"><dt class="mono">LinkedIn</dt><dd><a href="https://www.linkedin.com/in/nazira-tinto-85132121/" rel="noopener">linkedin.com/in/nazira-tinto-85132121</a></dd>
+ <dl class="ln"><dt class="mono">LinkedIn</dt><dd><a id="linkedin-link" href="https://linkedin.com/in/nazira-tinto-85132121a" rel="noopener">linkedin.com/in/nazira-tinto-85132121a</a></dd>
  <dt class="mono">Email</dt><dd id="em"></dd></dl>
  <a class="btn p" id="cv" href="cv/Nazira-Tinto-CV.pdf" download>Télécharger mon CV <i>↓</i></a>
 </div></section>
@@ -381,6 +381,8 @@ nav a{padding:12px 0}
   if (responses.some(response => !response.ok)) throw new Error("Impossible de charger les contenus du portfolio.");
   const [settings, projects, education, experiences, certificates, carnet] = await Promise.all(responses.map(response => response.json()));
   const EMAIL = settings.email || "";
+  const linkedin = document.getElementById("linkedin-link");
+  if (linkedin && settings.linkedin) { linkedin.href = settings.linkedin; linkedin.textContent = settings.linkedin.replace(/^https?:\\/\\//, "").replace(/\\/$/, ""); }
   if (settings.profile_photo) {
     const profilePhoto = document.getElementById("profile-photo");
     if (profilePhoto) profilePhoto.src = settings.profile_photo;
