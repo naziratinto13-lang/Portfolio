@@ -382,7 +382,7 @@ nav a{padding:12px 0}
   const [settings, projects, education, experiences, certificates, carnet] = await Promise.all(responses.map(response => response.json()));
   const EMAIL = settings.email || "";
   const linkedin = document.getElementById("linkedin-link");
-  if (linkedin && settings.linkedin) { linkedin.href = settings.linkedin; linkedin.textContent = settings.linkedin.replace(/^https?:\\/\\//, "").replace(/\\/$/, ""); }
+  if (linkedin && settings.linkedin) { linkedin.href = settings.linkedin; linkedin.textContent = settings.linkedin.replace("https://", "").replace("http://", "").replace(/\/$/, ""); }
   if (settings.profile_photo) {
     const profilePhoto = document.getElementById("profile-photo");
     if (profilePhoto) profilePhoto.src = settings.profile_photo;
