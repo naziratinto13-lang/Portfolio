@@ -40,6 +40,7 @@ collections:
                 fields:
                   - { label: "Type", name: "k", widget: "select", options: [{label: "Photo", value: "photo"}, {label: "Carte", value: "map"}, {label: "PDF / document", value: "pdf"}, {label: "Vidéo", value: "video"}, {label: "Lien de rapport existant", value: "doc"}] }
                   - { label: "Adresse du fichier ou lien", name: "src", widget: "string", required: false }
+                  - { label: "Importer une vidéo MP4 (facultatif)", name: "file", widget: "file", required: false }
                   - { label: "Référence interne existante", name: "ref", widget: "string", required: false }
                   - { label: "Légende / texte du lien", name: "cap", widget: "string", required: false }
                   - { label: "Image d’aperçu de la vidéo", name: "poster", widget: "string", required: false }
