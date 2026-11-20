@@ -116,7 +116,9 @@
     {
       "f": "B",
       "t": "Modélisation de réseaux hydrauliques",
-      "draft": 1
+      "draft": 1,
+      "y": "2025-2026",
+      "s": "Ce projet consiste à représenter et simuler le fonctionnement d'un réseau hydraulique afin d'étudier la circulation de l'eau dans les conduites et de vérifier si les caractéristiques du réseau permettent de répondre aux besoins des usagers."
     },
     {
       "f": "D",
