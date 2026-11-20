@@ -64,22 +64,29 @@
     {
       "g": "Activités",
       "t": "Reboisement",
-      "img": "/Portfolio/uploads/reboisement.png"
+      "img": "/Portfolio/uploads/reboisement.png",
+      "txt": "Participation à une activité de plantation et de sensibilisation environnementale.",
+      "lieu": "2iE Kamboinsin"
     },
     {
       "g": "Activités",
       "t": "Doctoriales 2025",
-      "img": "/Portfolio/uploads/doctoriales-2025.jpeg"
+      "img": "/Portfolio/uploads/doctoriales-2025.jpeg",
+      "txt": "Participation à des activités scientifiques et académiques autour de la recherche.",
+      "lieu": "Salla de conférences de 2iE"
     },
     {
       "g": "Activités",
       "t": "SITHAO",
-      "img": "/Portfolio/uploads/salon-international-des-toilettes-sitao-.jpeg"
+      "img": "/Portfolio/uploads/salon-international-des-toilettes-sitao-.jpeg",
+      "txt": "Participation à la 1ère édition du Salon International des Toilettes, de l'Hygiène et de l'Assainissement de Ouagadougou consacré aux thématiques de l'eau, de l'hydraulique, de l'assainissement et de l'agriculture."
     },
     {
       "g": "Activités",
       "t": "Activité de sensibilisation à l'hygiène au complexe EPHATA",
-      "img": "/Portfolio/uploads/sensibilisation-à-l-hygiène-dans-une-école.mp4"
+      "img": "/Portfolio/uploads/sensibilisation-à-l-hygiène-dans-une-école.mp4",
+      "txt": "Participation à une activité de sensibilisation sur les bonnes pratiques d'hygiène au complexe scolaire EPHATA.",
+      "lieu": "Complexe scolaire EPHATA."
     },
     {
       "g": "Distinction",
