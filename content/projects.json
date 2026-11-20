@@ -127,7 +127,11 @@
     {
       "f": "D",
       "t": "Projet d'aménagement hydro-agricole",
-      "draft": 1
+      "draft": 1,
+      "s": "Ce projet vise à étudier l'aménagement d'un espace agricole en vue d'améliorer la maîtrise de l'eau, de favoriser les activités agricoles et d'optimiser l'exploitation des terres, notamment dans le contexte des bas-fonds.",
+      "o": "Évaluer l'état et le fonctionnement d'un aménagement hydro-agricole existant afin d'identifier ses contraintes et ses besoins de réhabilitation ou d'amélioration.",
+      "k": "Diagnostic d'infrastructures hydro-agricoles, gestion de l'eau, analyse technique, propositions de réhabilitation.",
+      "l": "Aspects étudiés\n- État des ouvrages.\n- Fonctionnement du système de distribution.\n- Organisation de l'irrigation.\n- État des infrastructures.\n- Gestion de l'eau.\n- Identification des problèmes de fonctionnement.\n- Propositions d'amélioration."
     }
   ]
 }
