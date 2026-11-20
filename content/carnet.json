@@ -37,7 +37,9 @@
     {
       "g": "Sorties et visites techniques",
       "t": "Télégestion et recherche des fuites",
-      "img": "/Portfolio/uploads/télégestion-2-.jpeg"
+      "img": "/Portfolio/uploads/télégestion-2-.jpeg",
+      "lieu": "Le centre des métiers de l'eau",
+      "txt": "Lors de cette sortie, nous avons pris connaisssances des différentes techniques de recherche de fuite utilisées au Burkina ainsi que des outils utilisés."
     },
     {
       "g": "Sorties et visites techniques",
@@ -45,7 +47,9 @@
       "img": "/Portfolio/uploads/diagnostic-des-aménagments-2-.jpeg",
       "imgs": [
         "/Portfolio/uploads/diagnostic-des-aménagements.jpeg"
-      ]
+      ],
+      "lieu": "Aménagement hydro-agricole de Bazèga",
+      "txt": "Évaluer l'état et le fonctionnement de l'aménagement hydro-agricole existant afin d'identifier ses contraintes et ses besoins de réhabilitation ou d'amélioration."
     },
     {
       "g": "Sorties et visites techniques",
