@@ -23,7 +23,7 @@ collections:
             summary: "{{fields.t}} · {{fields.y}}"
             fields:
               - { label: "Titre", name: "t", widget: "string" }
-              - { label: "Famille", name: "f", widget: "select", options: [{label: "Hydrologie & modélisation", value: "A"}, {label: "Eau potable & hydraulique", value: "B"}, {label: "Assainissement & drainage", value: "C"}, {label: "Aménagements hydro-agricoles", value: "D"}, {label: "SIG & analyse spatiale", value: "E"}, {label: "Académique & personnel", value: "F"}, {label: "Voirie & ouvrages", value: "G"}, {label: "Créativité & initiatives", value: "H"}, {label: "Projets de fin d’études", value: "I"}] }
+              - { label: "Famille", name: "f", widget: "select", options: [{label: "Hydrologie & modélisation", value: "A"}, {label: "Eau potable & hydraulique", value: "B"}, {label: "Assainissement & drainage", value: "C"}, {label: "Aménagements hydro-agricoles", value: "D"}, {label: "SIG & analyse spatiale", value: "E"}, {label: "Académique & personnel", value: "F"}, {label: "Voirie / ouvrages", value: "G"}, {label: "Créativité", value: "H"}, {label: "Projets de fin d’études", value: "I"}] }
               - { label: "Année / période", name: "y", widget: "string", required: false }
               - { label: "Résumé", name: "s", widget: "text", required: false }
               - { label: "Contexte", name: "c", widget: "text", required: false }
