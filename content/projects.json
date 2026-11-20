@@ -169,6 +169,14 @@
       "f": "G",
       "o": "Participer à l'étude et à la conception d'aménagements routiers en intégrant les caractéristiques géométriques, topographiques et hydrauliques du projet.",
       "k": "- Lecture de plans.\n- Géométrie routière.\n- Topographie.\n- Gestion des eaux de ruissellement.\n- DAO."
+    },
+    {
+      "draft": false,
+      "t": "Télédetection",
+      "f": "E",
+      "o": "Exploiter les données géographiques pour produire des analyses spatiales, cartographier des phénomènes environnementaux et appuyer des études techniques.",
+      "k": "- SIG.\n- Analyse spatiale.\n- Cartographie.\n- Gestion de données géographiques.\n- Production de cartes professionnelles.",
+      "u": "QGIS, ENVI"
     }
   ]
 }
