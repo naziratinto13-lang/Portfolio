@@ -107,7 +107,11 @@
     {
       "f": "A",
       "t": "Dynamique fluviale",
-      "draft": 1
+      "draft": 1,
+      "s": "Ce projet porte sur la compréhension du fonctionnement et de l'évolution des cours d'eau, notamment les modifications de leur morphologie sous l'effet des écoulements, de l'érosion et du transport sédimentaire",
+      "k": "- Hydraulique fluviale.\n- Géomorphologie.\n- Analyse des écoulements.\n- Compréhension des phénomènes d'érosion et de sédimentation.\n- Analyse du fonctionnement des cours d'eau.",
+      "u": "Documentation et Excel",
+      "l": "Document word etfichier Excel."
     },
     {
       "f": "B",
