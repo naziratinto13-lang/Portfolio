@@ -86,7 +86,10 @@
       "t": "Activité de sensibilisation à l'hygiène au complexe EPHATA",
       "img": "/Portfolio/uploads/sensibilisation-à-l-hygiène-dans-une-école.mp4",
       "txt": "Participation à une activité de sensibilisation sur les bonnes pratiques d'hygiène au complexe scolaire EPHATA.",
-      "lieu": "Complexe scolaire EPHATA."
+      "lieu": "Complexe scolaire EPHATA.",
+      "imgs": [
+        "/Portfolio/uploads/ephata.jpeg"
+      ]
     },
     {
       "g": "Distinction",
@@ -94,7 +97,10 @@
       "txt": "Activité de partage d'expériences des femmes dans le domaine de l'ingénierie et dévoilement du « Wall of Women » où j'ai eu l'honneur d'y être affiché. Ce tableau regroupant les photos des différentes majors de promotion ainsi que des figures féminines de l'Institut 2iE met en avant la place de la femme et son excellence au sein de l'ingénierie.",
       "img": "/Portfolio/uploads/wall-of-women.jpeg",
       "date": "08 Mars (journée internationales des droits des femmes)",
-      "lieu": "2iE Kamboinsin"
+      "lieu": "2iE Kamboinsin",
+      "imgs": [
+        "/Portfolio/uploads/whatsapp-image-2026-11-20-at-14.28.50.jpeg"
+      ]
     }
   ]
 }
