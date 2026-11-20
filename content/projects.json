@@ -102,7 +102,13 @@
     {
       "f": "A",
       "t": "Modélisation hydrologique du bassin du Liptougou à FAGA",
-      "draft": 1
+      "draft": 1,
+      "media": [
+        {
+          "k": "doc",
+          "src": "https://drive.google.com/file/d/1LV2QefDJH9RJeKK87QMFXG2mcYt87HZ6/view?usp=sharing"
+        }
+      ]
     },
     {
       "f": "A",
