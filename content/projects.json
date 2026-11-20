@@ -80,6 +80,8 @@
     {
       "c": "Stage de recherche (appui à un projet doctoral), Institut 2iE, Ouagadougou, depuis sept. 2026.",
       "f": "A",
+      "k": "- Modélisation hydrologique distribuée.\n- Analyse des données hydroclimatiques.\n- SIG et traitement de données spatiales.\n- Simulation pluie-débit.\n- R / RSWAT et SWAT.",
+      "l": "- Préparation et structuration des données nécessaires à la modélisation hydrologique.\n- Délimitation du bassin versant et préparation des données spatiales.\n- Mise en place de la chaîne de modélisation avec SWAT via RSWAT.\n- Paramétrage et lancement des simulations hydrologiques.\n- Test de la chaîne de simulation sur le bassin de Wayen, sur la période 1991–2020.\n- Préparation des étapes de calage et d'analyse des résultats.",
       "m": "Création et structuration de bases de données ; simulations et calage ; test de la chaîne de simulation sur le bassin de Wayen pour la période 1991–2020.",
       "o": "Mettre en œuvre le modèle SWAT avec le package RSWAT sur les bassins nationaux du Burkina Faso (Mouhoun, Niger, Comoé et Nakambé).",
       "r": "Stagiaire en recherche — appui à un projet doctoral.",
