@@ -96,7 +96,12 @@
       "t": "Carte interactive de l'évolution du barrage de Samendéni",
       "s": "Projet personnel.",
       "c": "Projet personnel.",
-      "media": [],
+      "media": [
+        {
+          "video_file": "/Portfolio/uploads/carte_interactive-.mp4",
+          "k": "video"
+        }
+      ],
       "k": "Cette carte montre l'évolution du barrage de Samendeni sur 9 ans (2017-2026). Elle permet de suivre l'évolution du barrage et d'avoir plusieurs informations importantes sur le barrage en une seule carte."
     },
     {
