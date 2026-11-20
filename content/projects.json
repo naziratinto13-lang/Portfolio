@@ -149,6 +149,13 @@
       "o": "Évaluer l'état et le fonctionnement d'un aménagement hydro-agricole existant afin d'identifier ses contraintes et ses besoins de réhabilitation ou d'amélioration.",
       "k": "Diagnostic d'infrastructures hydro-agricoles, gestion de l'eau, analyse technique, propositions de réhabilitation.",
       "l": "Aspects étudiés\n- État des ouvrages.\n- Fonctionnement du système de distribution.\n- Organisation de l'irrigation.\n- État des infrastructures.\n- Gestion de l'eau.\n- Identification des problèmes de fonctionnement.\n- Propositions d'amélioration."
+    },
+    {
+      "draft": false,
+      "t": "Conception et dimensionnement d'un réservoir en béton",
+      "f": "G",
+      "o": "Étudier la conception d'un ouvrage de stockage d'eau en béton répondant aux exigences de capacité, de fonctionnement et de stabilité.",
+      "k": "- Conception d'ouvrages hydrauliques.\n- Dimensionnement d'ouvrages de stockage.\n- Lecture et réalisation de plans.\n- Calculs de génie civil."
     }
   ]
 }
