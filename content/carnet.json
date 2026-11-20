@@ -36,7 +36,10 @@
       "t": "Diagnostic des stations de traitement des eaux usées",
       "img": "/Portfolio/uploads/station-de-traitement-des-eaux-usées-2-.jpeg",
       "lieu": "STEP de KOSSODO",
-      "txt": "Le but de cette sortie était de nous permettre de diagnostiquer une STEP de la ville à l'issue du cours théorique que nous avons suivi."
+      "txt": "Le but de cette sortie était de nous permettre de diagnostiquer une STEP de la ville à l'issue du cours théorique que nous avons suivi.",
+      "imgs": [
+        "/Portfolio/uploads/station-de-traitement-des-eaux-usées.jpeg"
+      ]
     },
     {
       "g": "Sorties et visites techniques",
