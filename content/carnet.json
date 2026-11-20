@@ -12,13 +12,14 @@
       "t": "Gestion des déchets solides",
       "img": "/Portfolio/uploads/centre-de-traitement-des-déchets.mp4",
       "lieu": "Centre de traitement des déchets de Ouagadougou",
-      "txt": "L'objectif de cette sortie pour nous a été de prendre connaissance de la chaîne de traitement des déchets solides et des différentes méthodes de tri et de valorisation."
+      "txt": "L'objectif de cette sortie pour nous a été de prendre connaissance de la chaîne de traitement des déchets solides et des différentes méthodes de tri et de valorisation des déchets solides."
     },
     {
       "g": "Sorties et visites techniques",
       "t": "Aménagement des bas-fonds",
       "img": "/Portfolio/uploads/bas-fond-de-sapone.mp4",
-      "lieu": "Bas-fond de SAPONE"
+      "lieu": "Bas-fond de SAPONE",
+      "txt": "Lors de cette sortie, nous avons pris connaissance des différents ouvrages présents sur un aménagement de bas-fond, de leurs rôles et de tous les acteurs impliqués dans les aménagements de bas-fond. "
     },
     {
       "g": "Sorties et visites techniques",
@@ -28,8 +29,10 @@
     },
     {
       "g": "Sorties et visites techniques",
-      "t": "Procédés de traitement des eaux usées",
-      "img": "/Portfolio/uploads/station-de-traitement-des-eaux-usées-2-.jpeg"
+      "t": "Diagnostic des stations de traitement des eaux usées",
+      "img": "/Portfolio/uploads/station-de-traitement-des-eaux-usées-2-.jpeg",
+      "lieu": "STEP de KOSSODO",
+      "txt": "Le but de cette sortie était de nous permettre de diagnostiquer une STEP de la ville à l'issue du cours théorique que nous avons suivi."
     },
     {
       "g": "Sorties et visites techniques",
